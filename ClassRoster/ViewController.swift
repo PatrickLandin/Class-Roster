@@ -74,18 +74,8 @@ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         detailViewController.selectedPerson = firstNameToPass
         detailViewController.selectedLastName = lastNameToPass
         
-        
-        
-        
-//        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//            if segue.identifier == "SHOW_FULL_NAME" {
-//                let detailViewController = segue.destinationViewController as DetailViewController
-//                let selectedIndexPath = self.tableView.indexPathForSelectedRow()
-//                var firstNameToPass = self.firstNames[selectedIndexPath!.row]
-//                var lastNameToPass = self.lastNames[selectedIndexPath!.row]
-//                detailViewController.selectedPerson = firstNameToPass
-//                detailViewController.relieverLast = lastNameToPass
+        }
+    
     }
-}
 
 }
