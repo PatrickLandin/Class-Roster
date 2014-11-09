@@ -34,8 +34,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     self.firstName = [santa, clifton, rufferford, poppington]
     
-    var me = Person()
-    self.firstName.append(me)
+//    var me = Person()
+//    self.firstName.append(me)
     
     var barnswallow = PersonLastName()
     barnswallow.lastName = "Barnswallow"
@@ -75,7 +75,6 @@ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         detailViewController.selectedLastName = lastNameToPass
         
         }
-    
     }
 
 }

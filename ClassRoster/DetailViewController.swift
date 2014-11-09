@@ -26,7 +26,6 @@ class DetailViewController: UIViewController {
         self.lastNameLabel.text = self.selectedLastName.lastName
         
         
-        
         // self.view.backgroundColor = UIColor.redColor()
         
         }
