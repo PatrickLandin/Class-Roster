@@ -10,12 +10,23 @@ import Foundation
 
 class Person {
     
-    var firstName = "Patrick L."
-    
-}
-
-class PersonLastName {
-    
+    var firstName = "Patrick"
     var lastName = "Landin"
+    var isStudent = true
     
+    init() {
+        self.firstName = "Patrick"
+        self.lastName = "Landin"
+        self.isStudent = true
+    } // default init()
+    
+    init (first: String, last: String, studentStatus: Bool) {
+        self.firstName = first
+        self.lastName = last
+        self.isStudent = studentStatus
+    } // init() with parameters
+    
+    func returnFullName() -> String {
+        return "\(self.firstName) \(self.lastName)"
+    }
 }

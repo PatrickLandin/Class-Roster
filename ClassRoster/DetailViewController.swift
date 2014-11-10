@@ -15,19 +15,13 @@ class DetailViewController: UIViewController {
     
     var selectedPerson = Person()
     
-    var selectedLastName = PersonLastName()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "First and Last Name"
+        self.title = "Their First and Last Names"
         
         self.nameLabel.text = self.selectedPerson.firstName
-        self.lastNameLabel.text = self.selectedLastName.lastName
-        
-        
-        // self.view.backgroundColor = UIColor.redColor()
+        self.lastNameLabel.text = self.selectedPerson.lastName
         
         }
-    
 }
