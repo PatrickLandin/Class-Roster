@@ -26,6 +26,7 @@ class Person {
         self.isStudent = studentStatus
     } // init() with parameters
     
+    // return the first and last names in a string
     func returnFullName() -> String {
         return "\(self.firstName) \(self.lastName)"
     }

@@ -12,21 +12,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     var names = [Person]()
+        // backing array
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        self.title = "Men that are all of the bass"
+        self.title = "Men that are all about that bass"
+        
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        var firstPerson = Person(first: "Santa", last: "H. Barnswallow", studentStatus: false)
-        var secondPerson = Person(first: "Clifton", last: "B. Clumberbatch", studentStatus: false)
-        var thirdPerson = Person(first: "Rufferford", last: "T. Woofinghausen", studentStatus: false)
-        var fourthPerson = Person(first: "Poppington", last: "H. Lardvaarkian", studentStatus: false)
-        var fifthPerson = Person(first: "Bernard", last: "B. Bluffingshire", studentStatus: false)
-        var sixthPerson = Person(first: "Brownie", last: "P. Shytles", studentStatus: false)
+        // new persons
+        var firstPerson = Person(first: "Santa H.", last: "Barnswallow", studentStatus: false)
+        var secondPerson = Person(first: "Clifton B.", last: "Clumberbatch", studentStatus: false)
+        var thirdPerson = Person(first: "Rufferford T.", last: "Woofinghausen", studentStatus: false)
+        var fourthPerson = Person(first: "Poppington H.", last: "Bumblebumpin", studentStatus: false)
+        var fifthPerson = Person(first: "Bernard B.", last: "Bluffingshire", studentStatus: false)
+        var sixthPerson = Person(first: "Brownie P.", last: "McShytles", studentStatus: false)
         
+        // adding persons to the array
         self.names.append(firstPerson)
         self.names.append(secondPerson)
         self.names.append(thirdPerson)
@@ -37,6 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.names.count
+            // how many cells?
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -46,6 +51,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
         cell.textLabel.text = PersonToDisplay.firstName
         return cell
+            // what goes in the cells?
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
