@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IzK-mb-Qp1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--TableViewController-->
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rbr-uX-tQr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rbr-uX-tQr">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -35,6 +36,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rbr-uX-tQr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="5g3-cU-now"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rbr-uX-tQr" secondAttribute="trailing" constant="-16" id="8IJ-AK-LiB"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="rbr-uX-tQr" secondAttribute="bottom" id="mBg-S6-6CA"/>
+                            <constraint firstItem="rbr-uX-tQr" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="v5J-tp-fYQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6aM-gm-NDU"/>
                     <connections>
@@ -57,24 +64,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzc-VR-Sf2">
-                                <rect key="frame" x="29" y="174" width="300" height="52"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="highlightedColor" red="1" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCw-Ci-mf3">
-                                <rect key="frame" x="75" y="234" width="300" height="52"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="highlightedColor" red="1" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eIN-xn-5Sd">
+                                <rect key="frame" x="225" y="140" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Dnw-Z6-IfY"/>
+                                    <constraint firstAttribute="height" constant="30" id="bV3-mC-caj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-El-fXQ">
+                                <rect key="frame" x="225" y="180" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="RYM-nN-L6n"/>
+                                    <constraint firstAttribute="height" constant="30" id="t8N-FW-Pcz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="eIN-xn-5Sd" secondAttribute="centerX" id="7i4-3o-2yk"/>
+                            <constraint firstAttribute="centerX" secondItem="hn7-El-fXQ" secondAttribute="centerX" id="LPY-EU-4He"/>
+                            <constraint firstItem="hn7-El-fXQ" firstAttribute="top" secondItem="eIN-xn-5Sd" secondAttribute="bottom" constant="10" id="Tim-bD-cKJ"/>
+                            <constraint firstItem="eIN-xn-5Sd" firstAttribute="top" secondItem="jtr-nB-a6N" secondAttribute="bottom" constant="76" id="XwW-IA-T4D"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="lastNameLabel" destination="uCw-Ci-mf3" id="s0b-IG-rm9"/>
-                        <outlet property="nameLabel" destination="Hzc-VR-Sf2" id="cu9-P5-Dbn"/>
+                        <outlet property="firstNameText" destination="eIN-xn-5Sd" id="DTc-e9-AOp"/>
+                        <outlet property="lastNameText" destination="hn7-El-fXQ" id="rKG-oy-ghM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVf-NO-Os9" userLabel="First Responder" sceneMemberID="firstResponder"/>

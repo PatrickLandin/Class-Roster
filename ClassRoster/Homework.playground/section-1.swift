@@ -12,3 +12,29 @@ var str = "Hello, playground"
 //Create a show segue from your table view cell to your detail view controller on your storyboard.
 //Using prepareForSegue(), pass the person they clicked on in the tableview to the detail view controller
 //Show the person's first and last name in separate labels on the detail view controller.
+
+
+class Person {
+    
+    var firsty: "Patrick"
+    var image : UIImage?
+}
+
+
+class Person1 {
+    
+    var firstName: String
+    
+    init (first : String) {
+        self.firstName = first
+    }
+}
+
+class Person2 {
+    
+    var firstName: String?
+    
+    init (first : String) {
+        
+    }
+}

@@ -50,6 +50,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var PersonToDisplay = self.names[indexPath.row]
     
         cell.textLabel.text = PersonToDisplay.firstName
+        cell.textLabel.font = UIFont(name: "Avenir", size: 22)
+        
         return cell
             // what goes in the cells?
     }

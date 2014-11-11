@@ -1,6 +1,13 @@
 Foundations 2 iOS Homework
 Class Roster
 
+Homework #5:
+
+Replace the UILabels with UITextFields
+When the user presses the return key, dismiss the keyboard.
+Use autolayout to layout your detail view controller so that it looks good in both portrait and landscape modes.
+Add an optional UIImage property to your Person class.
+
 Homework #4:
 
 Embed your main view controller (the one with the table view) in a navigation controller.

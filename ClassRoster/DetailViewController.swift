@@ -8,23 +8,35 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
     
-    // label outlets
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
+    // text field outlets
+    @IBOutlet weak var firstNameText: UITextField!
+    @IBOutlet weak var lastNameText: UITextField!
     
     var selectedPerson = Person()
-    // uses the defailt init()
+    // uses the defailt init() with no parameters
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //We're becoming the delegate for each text field
+        self.firstNameText.delegate = self
+        self.lastNameText.delegate = self
+        
         self.title = "Their First and Last Names"
         
         // filling names into labels
-        self.nameLabel.text = self.selectedPerson.firstName
-        self.lastNameLabel.text = self.selectedPerson.lastName
+        self.firstNameText.text = self.selectedPerson.firstName
+        self.lastNameText.text = self.selectedPerson.lastName
         
         }
+    
+    //Dismiss the keyboard after user presses return key
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
 }
+
