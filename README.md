@@ -1,6 +1,12 @@
 Foundations 2 iOS Homework
 Class Roster
 
+Homework #6:
+
+Implement a UIImagePickerController into your app. Launch via a button press, just like i did in class.
+Upon the user choosing or taking a photo, set your image view on your detail view controller to show that image
+Also set the selectedPerson's image property to be the chosen image as well.
+
 Homework #5:
 
 Replace the UILabels with UITextFields

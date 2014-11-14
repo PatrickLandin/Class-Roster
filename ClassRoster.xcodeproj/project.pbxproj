@@ -415,6 +415,7 @@
 				EC9EF7911A0E8D5900869069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC9EF7921A0E8D5900869069 /* Build configuration list for PBXNativeTarget "ClassRosterTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +424,7 @@
 				EC9EF7941A0E8D5900869069 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
