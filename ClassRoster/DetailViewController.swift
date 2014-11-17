@@ -21,19 +21,29 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     var selectedPerson = Person()
     // uses the defailt init()
     
+    var personView = Person(first: "", last: "", studentStatus: false)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Person Profile"
+        firstNameText.font = UIFont(name: "Avenir", size: 20)
+        lastNameText.font = UIFont(name: "Avenir", size: 20)
         
         //We're becoming the delegate for each text field
         self.firstNameText.delegate = self
         self.lastNameText.delegate = self
         
-        self.title = "Their First and Last Names"
-        
         // filling names into labels
         self.firstNameText.text = self.selectedPerson.firstName
         self.lastNameText.text = self.selectedPerson.lastName
         
+        //Attempt at Data Persistence
+        if (self.personView.image != nil) {
+            self.imageView.image = self.personView.image!
+        }   else {
+                self.imageView.image = self.imageView.image
+            }
         }
     
     //Dismiss the keyboard after user presses return key
