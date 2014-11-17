@@ -44,11 +44,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
     
     @IBAction func cameraButtonPress(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
-            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-            
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
             self.imagePickerController.delegate = self
-            
             self.imagePickerController.allowsEditing = true
             self.presentViewController(self.imagePickerController, animated: true, completion: nil)
         }

@@ -55,12 +55,12 @@
         <!--DetailViewController-->
         <scene sceneID="YsG-b3-Emc">
             <objects>
-                <viewController title="DetailViewController" id="gNI-sh-5vP" customClass="UIImagePickerController" sceneMemberID="viewController">
+                <viewController title="DetailViewController" id="gNI-sh-5vP" customClass="DetailViewController" customModule="ClassRoster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jtr-nB-a6N"/>
                         <viewControllerLayoutGuide type="bottom" id="j33-yu-Vsh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nXs-xL-F93">
+                    <view key="view" contentMode="scaleToFill" id="nXs-xL-F93" customClass="UIImageView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -96,11 +96,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="myc-0b-zIZ">
-                                <rect key="frame" x="180" y="253" width="240" height="128"/>
+                                <rect key="frame" x="165" y="223" width="270" height="305"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="1QV-Zz-x3k"/>
-                                    <constraint firstAttribute="width" constant="240" id="1e8-l3-DG9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="6pp-rt-rvi"/>
+                                    <constraint firstAttribute="height" constant="305" id="M2k-o0-4VP"/>
+                                    <constraint firstAttribute="width" constant="270" id="Zlc-zJ-Pct"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="305" id="eDp-JJ-wAQ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -115,12 +117,15 @@
                             <constraint firstItem="hn7-El-fXQ" firstAttribute="top" secondItem="eIN-xn-5Sd" secondAttribute="bottom" constant="10" id="Tim-bD-cKJ"/>
                             <constraint firstItem="j33-yu-Vsh" firstAttribute="top" secondItem="vHV-pf-kse" secondAttribute="bottom" constant="29" id="XGw-6y-jgK"/>
                             <constraint firstItem="eIN-xn-5Sd" firstAttribute="top" secondItem="jtr-nB-a6N" secondAttribute="bottom" constant="76" id="XwW-IA-T4D"/>
-                            <constraint firstItem="myc-0b-zIZ" firstAttribute="top" secondItem="hn7-El-fXQ" secondAttribute="bottom" constant="43" id="uY7-xF-K5c"/>
+                            <constraint firstItem="vHV-pf-kse" firstAttribute="top" secondItem="myc-0b-zIZ" secondAttribute="bottom" constant="13" id="ZVe-EP-4yJ"/>
+                            <constraint firstItem="vHV-pf-kse" firstAttribute="top" secondItem="myc-0b-zIZ" secondAttribute="bottom" constant="34" id="ceC-5X-uJV"/>
+                            <constraint firstItem="myc-0b-zIZ" firstAttribute="top" secondItem="hn7-El-fXQ" secondAttribute="bottom" constant="13" id="oCK-uQ-ujC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="LPY-EU-4He"/>
                                 <exclude reference="RqV-br-Ci4"/>
+                                <exclude reference="LPY-EU-4He"/>
+                                <exclude reference="ceC-5X-uJV"/>
                             </mask>
                         </variation>
                     </view>
