@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC91744F1A19A62500EF8993 /* P1Butt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC91744E1A19A62500EF8993 /* P1Butt.jpg */; };
 		EC9EF7761A0E8D5900869069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9EF7751A0E8D5900869069 /* AppDelegate.swift */; };
 		EC9EF7781A0E8D5900869069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9EF7771A0E8D5900869069 /* ViewController.swift */; };
 		EC9EF77B1A0E8D5900869069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC9EF7791A0E8D5900869069 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC91744E1A19A62500EF8993 /* P1Butt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = P1Butt.jpg; path = ../../../../../Pictures/P1Butt.jpg; sourceTree = "<group>"; };
 		EC9EF7701A0E8D5900869069 /* ClassRoster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassRoster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9EF7741A0E8D5900869069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC9EF7751A0E8D5900869069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				EC9EF7951A0E8DBA00869069 /* Person.swift */,
 				EC9EF7791A0E8D5900869069 /* Main.storyboard */,
 				EC9EF77C1A0E8D5900869069 /* Images.xcassets */,
+				EC91744E1A19A62500EF8993 /* P1Butt.jpg */,
 				EC9EF77E1A0E8D5900869069 /* LaunchScreen.xib */,
 				EC9EF7731A0E8D5900869069 /* Supporting Files */,
 				EC9EF7991A0E8F2400869069 /* Homework.playground */,
@@ -202,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC9EF77B1A0E8D5900869069 /* Main.storyboard in Resources */,
+				EC91744F1A19A62500EF8993 /* P1Butt.jpg in Resources */,
 				EC9EF7801A0E8D5900869069 /* LaunchScreen.xib in Resources */,
 				EC9EF77D1A0E8D5900869069 /* Images.xcassets in Resources */,
 			);

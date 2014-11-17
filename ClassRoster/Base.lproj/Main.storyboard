@@ -95,7 +95,7 @@
                                     <action selector="cameraButtonPress:" destination="gNI-sh-5vP" eventType="touchUpInside" id="twd-Ud-22M"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="myc-0b-zIZ">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="P1Butt.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="myc-0b-zIZ">
                                 <rect key="frame" x="165" y="223" width="270" height="305"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -158,4 +158,7 @@
             <point key="canvasLocation" x="270" y="-372"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="P1Butt.jpg" width="615" height="347"/>
+    </resources>
 </document>
