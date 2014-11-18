@@ -9,24 +9,26 @@
 import Foundation
 import UIKit
 
+// I have taken out isStudent to make Plist integration more simple
+
 class Person {
     
     var firstName : String
     var lastName : String
-    var isStudent = true
+//    var isStudent = true
     var image : UIImage?
     
     init() {
         self.firstName = "Patrick"
         self.lastName = "Landin"
-        self.isStudent = true
+//        self.isStudent = true
     }
     // default init()
     
-    init (first: String, last: String, studentStatus: Bool) {
+    init (first: String, last: String) {
         self.firstName = first
         self.lastName = last
-        self.isStudent = studentStatus
+//        self.isStudent = studentStatus
     }
     // init() with parameters
     
