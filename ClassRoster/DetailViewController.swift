@@ -21,8 +21,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     var selectedPerson = Person()
     // uses the defailt init()
     
-    var personToEdit = Person(first: "", last: "", studentStatus: false)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,12 +31,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         //We're becoming the delegate for each text field
         self.firstNameText.delegate = self
         self.lastNameText.delegate = self
-        self.imageView.image = personToEdit.image
+        self.imageView.image = selectedPerson.image
         
         // filling names into labels
         self.firstNameText.text = self.selectedPerson.firstName
         self.lastNameText.text = self.selectedPerson.lastName
         
+        // Saving picture taken to person
+        if (self.selectedPerson.image != nil) {
+            self.imageView.image = self.selectedPerson.image!
+            }
         }
     
     //Dismiss the keyboard after user presses return key
@@ -51,7 +53,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     @IBAction func cameraButtonPress(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
             self.imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+            
             self.imagePickerController.delegate = self
+            
             self.imagePickerController.allowsEditing = true
             self.presentViewController(self.imagePickerController, animated: true, completion: nil)
         }
@@ -59,9 +63,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let image = info[UIImagePickerControllerEditedImage] as UIImage
-        self.imageView.image = image
         
-        self.personToEdit.image = imageView.image
+        self.imageView.image = image
+        self.selectedPerson.image = imageView.image
         
         imagePickerController.dismissViewControllerAnimated(true, completion: nil)
     }

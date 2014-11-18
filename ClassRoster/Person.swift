@@ -11,8 +11,8 @@ import UIKit
 
 class Person {
     
-    var firstName = "Patrick"
-    var lastName = "Landin"
+    var firstName : String
+    var lastName : String
     var isStudent = true
     var image : UIImage?
     
