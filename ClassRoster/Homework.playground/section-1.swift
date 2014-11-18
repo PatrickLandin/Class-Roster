@@ -14,13 +14,6 @@ var str = "Hello, playground"
 //Show the person's first and last name in separate labels on the detail view controller.
 
 
-class Person {
-    
-    var firsty: "Patrick"
-    var image : UIImage?
-}
-
-
 class Person1 {
     
     var firstName: String
@@ -38,3 +31,35 @@ class Person2 {
         
     }
 }
+
+
+
+// Dictionaries
+
+// Creating dictionary
+var myInfo = ["Seattle" : "Seahawks"]
+
+// Setting a value in a dictionary
+myInfo["New York"] = "Giants"
+var anotherInfo = ["Miami" : "Dolphins"]
+
+// This concatenation doesn't work
+// var thirdInfo = myInfo + anotherInfo
+
+// Access a value in a dictionary
+var myTeam =  myInfo["Seattle"]
+var superBowlLosers = myInfo["Denver"]
+
+if superBowlLosers != nil {
+    
+}
+// superBowlLosers!.lastPathComponent
+
+var anyInfo = [String : AnyObject]()
+
+// You can store dictionaries inside dictionaries
+anyInfo["Extra Dictionary"] = anotherInfo
+
+
+
+

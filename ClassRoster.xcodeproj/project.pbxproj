@@ -16,6 +16,8 @@
 		EC9EF78C1A0E8D5900869069 /* ClassRosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9EF78B1A0E8D5900869069 /* ClassRosterTests.swift */; };
 		EC9EF7961A0E8DBA00869069 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9EF7951A0E8DBA00869069 /* Person.swift */; };
 		EC9EF7981A0E8E5B00869069 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9EF7971A0E8E5B00869069 /* DetailViewController.swift */; };
+		ECBC71DF1A1AFAF300ECBBA8 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC71DE1A1AFAF300ECBBA8 /* PersonTableViewCell.swift */; };
+		ECBC71E11A1B066B00ECBBA8 /* Roster.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECBC71E01A1B066B00ECBBA8 /* Roster.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		EC9EF7951A0E8DBA00869069 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EC9EF7971A0E8E5B00869069 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EC9EF7991A0E8F2400869069 /* Homework.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Homework.playground; sourceTree = "<group>"; };
+		ECBC71DE1A1AFAF300ECBBA8 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		ECBC71E01A1B066B00ECBBA8 /* Roster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Roster.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +92,14 @@
 				EC9EF7771A0E8D5900869069 /* ViewController.swift */,
 				EC9EF7971A0E8E5B00869069 /* DetailViewController.swift */,
 				EC9EF7951A0E8DBA00869069 /* Person.swift */,
+				ECBC71DE1A1AFAF300ECBBA8 /* PersonTableViewCell.swift */,
 				EC9EF7791A0E8D5900869069 /* Main.storyboard */,
 				EC9EF77C1A0E8D5900869069 /* Images.xcassets */,
 				EC91744E1A19A62500EF8993 /* P1Butt.jpg */,
 				EC9EF77E1A0E8D5900869069 /* LaunchScreen.xib */,
 				EC9EF7731A0E8D5900869069 /* Supporting Files */,
 				EC9EF7991A0E8F2400869069 /* Homework.playground */,
+				ECBC71E01A1B066B00ECBBA8 /* Roster.plist */,
 			);
 			path = ClassRoster;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 				EC9EF77B1A0E8D5900869069 /* Main.storyboard in Resources */,
 				EC91744F1A19A62500EF8993 /* P1Butt.jpg in Resources */,
 				EC9EF7801A0E8D5900869069 /* LaunchScreen.xib in Resources */,
+				ECBC71E11A1B066B00ECBBA8 /* Roster.plist in Resources */,
 				EC9EF77D1A0E8D5900869069 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +235,7 @@
 				EC9EF7961A0E8DBA00869069 /* Person.swift in Sources */,
 				EC9EF7781A0E8D5900869069 /* ViewController.swift in Sources */,
 				EC9EF7761A0E8D5900869069 /* AppDelegate.swift in Sources */,
+				ECBC71DF1A1AFAF300ECBBA8 /* PersonTableViewCell.swift in Sources */,
 				EC9EF7981A0E8E5B00869069 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

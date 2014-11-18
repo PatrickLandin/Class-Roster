@@ -1,6 +1,12 @@
 Foundations 2 iOS Homework
 Class Roster
 
+Homework #7:
+
+Create a custom table view cell with an image view and label
+Convert your app to use your custom cell instead of a regular uitableviewcell
+Create a plist with a root array, and fill it with dictionaries, each with a last name and first name key value pairing. In code, load and parse through the plist and create a person object for each dictionary. Add each person to your people array so your table view can show these people.
+
 Homework #6:
 
 Implement a UIImagePickerController into your app. Launch via a button press, just like i did in class.

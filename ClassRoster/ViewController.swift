@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
+//        self.loadFromPlist()
         
         // new persons
         var firstPerson = Person(first: "Santa H.", last: "Barnswallow", studentStatus: false)
@@ -38,6 +39,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.names.append(fifthPerson)
         self.names.append(sixthPerson)
     }
+    
+    // PList Action
+//    
+//    func loadFromPlist() {
+//        let plistURL = NSBundle.mainBundle().description
+//            pathForResource("Roster", ofType: "plist")
+//    }
+//        let plistArray = NSArray(contentsOfFile: plistURL)
+//        for object in plistArray! {
+//            println("looped")
+//            if let personDictionary = object as?
+//                NSDictionary    {
+//                    let firstName = personDictionary["FirstName"] as String
+//                var person = Person(first: firstName)
+//                self.names.
+//        }
+//    }
+    
+    
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.names.count
