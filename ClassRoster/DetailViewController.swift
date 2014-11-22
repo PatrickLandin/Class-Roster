@@ -24,7 +24,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Person Profile"
+        self.title = "Student Profile"
         firstNameText.font = UIFont(name: "Avenir", size: 22)
         lastNameText.font = UIFont(name: "Avenir", size: 22)
         

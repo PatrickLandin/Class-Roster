@@ -10,19 +10,58 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    var names = [Person]()
+        var names = [Person]()
         // backing array
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let peopleFromArchive = self.loadFromArchive() as [Person]? {
+            self.names = peopleFromArchive
+        } else {
+            self.loadFromPlist()
+            self.saveToArchive()
+        }
+        
+        var hasLaunched = NSUserDefaults.standardUserDefaults().boolForKey("firstTime") as Bool
+                if hasLaunched == false {
+                    // this is for first launch
+                    println("first launch")
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstTime")
+        }
+        
+        
+        // User defaults to check if it's the first time the user has launched the app
+//        var hasLaunched = false
+        NSUserDefaults.standardUserDefaults().setBool(hasLaunched, forKey: "firstTime")
+        // Calls save
+        NSUserDefaults.standardUserDefaults().synchronize()
     
-        self.title = "Men that are all about that bass"
+        self.title = "Class Roster"
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.loadFromPlist()
+        self.saveToArchive()
     }
+    
+    // Loading data from archive
+    func loadFromArchive() -> [Person]? {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        
+        if let peopleFromArchive = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath + "/archive1") as? [Person] {
+            return peopleFromArchive
+        }
+        return nil
+    }
+    
+    // Saving data to archive after user interaction
+    func saveToArchive() {
+        //get path to documents directory
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) [0] as String
+        //archive
+        NSKeyedArchiver.archiveRootObject(self.names, toFile: documentsPath + "/archive")
+    }
+    
     
     // PList Action
     func loadFromPlist() {
@@ -43,19 +82,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.names.count
             // how many cells?
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PERSON_CELL", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("PERSON_CELL", forIndexPath: indexPath) as PersonTableViewCell  // Cast it as our custom cell
     
         var PersonToDisplay = self.names[indexPath.row]
     
         cell.textLabel.text = PersonToDisplay.firstName
-        cell.textLabel.font = UIFont(name: "Avenir", size: 22)
+        cell.textLabel.font = UIFont(name: "Avenir", size: 24)
         
         return cell
             // what goes in the cells?
