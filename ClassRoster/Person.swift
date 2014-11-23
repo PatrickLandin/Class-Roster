@@ -23,14 +23,12 @@ class Person : NSObject, NSCoding {
         self.lastName = "Landin"
 //        self.isStudent = true
     }
-    // default init()
     
     init (first: String, last: String) {
         self.firstName = first
         self.lastName = last
 //        self.isStudent = studentStatus
     }
-    // init() with parameters
     
     // return the first and last names in a string
     func returnFullName() -> String {
