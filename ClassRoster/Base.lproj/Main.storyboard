@@ -80,7 +80,9 @@
                                         <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="personImageView" destination="HZ0-Aa-gVx" id="Fdk-TU-LQu"/>
+                                            <outlet property="nameLabel" destination="d0I-GE-9tX" id="jJS-7P-mUW"/>
+                                            <outlet property="personImageView" destination="HZ0-Aa-gVx" id="4qA-7e-6cc"/>
+                                            <outlet property="subNameLabel" destination="yes-3W-J2C" id="BZH-AB-1Nr"/>
                                             <segue destination="gNI-sh-5vP" kind="show" identifier="SHOW_DETAIL" id="h6l-9W-LCc"/>
                                         </connections>
                                     </tableViewCell>

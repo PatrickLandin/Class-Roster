@@ -23,7 +23,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             self.saveToArchive()
         }
         
-        
         var hasLaunched = NSUserDefaults.standardUserDefaults().boolForKey("firstTime") as Bool
                 if hasLaunched == false {
                     // this is for first launch
@@ -31,19 +30,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstTime")
         }
         
-        // User defaults to check if it's the first time the user has launched the app
-        
-//        var hasLaunched = false
-        NSUserDefaults.standardUserDefaults().setBool(hasLaunched, forKey: "firstTime")
-        // Calls save
-        NSUserDefaults.standardUserDefaults().synchronize()
-    
+//        // User defaults to check if it's the first time the user has launched the app
+//        
+////        var hasLaunched = false
+//        NSUserDefaults.standardUserDefaults().setBool(hasLaunched, forKey: "firstTime")
+//        // Calls save
+//        NSUserDefaults.standardUserDefaults().synchronize()
+//    
         self.title = "Class Roster"
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.saveToArchive()
+        
     }
+    
+        override func viewWillAppear(animated: Bool) {
+            super.viewWillAppear(animated)
+            self.tableView.reloadData()
+            self.saveToArchive()
+        }
+    
     
     // Loading data from archive
     func loadFromArchive() -> [Person]? {
@@ -91,13 +97,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("PERSON_CELL", forIndexPath: indexPath) as PersonTableViewCell  // Cast it as our custom cell
     
-        var PersonToDisplay = self.names[indexPath.row]
+        var personToDisplay = self.names[indexPath.row]
 
-        cell.nameLabel.text = PersonToDisplay.firstName
+        cell.nameLabel.text = personToDisplay.firstName
         cell.nameLabel.font = UIFont(name: "Avenir", size: 24)
-        cell.subNameLabel.text = PersonToDisplay.lastName
+        cell.subNameLabel.text = personToDisplay.lastName
         cell.subNameLabel.font = UIFont(name: "Avenir", size: 24)
-        cell.personImageView.image = PersonToDisplay.image
+        cell.personImageView.image = personToDisplay.image
         
         return cell
             // what goes in the cells?

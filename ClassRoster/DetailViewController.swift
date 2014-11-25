@@ -18,7 +18,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     var imagePickerController = UIImagePickerController()
     
-    var selectedPerson = Person()
+    var selectedPerson = Person?()
     // uses the defailt init()
     
     override func viewDidLoad() {
@@ -31,15 +31,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         //We're becoming the delegate for each text field
         self.firstNameText.delegate = self
         self.lastNameText.delegate = self
-        self.imageView.image = selectedPerson.image
         
         // filling names into labels
-        self.firstNameText.text = self.selectedPerson.firstName
-        self.lastNameText.text = self.selectedPerson.lastName
+        self.firstNameText.text = self.selectedPerson?.firstName
+        self.lastNameText.text = self.selectedPerson?.lastName
         
         // Saving picture taken to person
-        if (self.selectedPerson.image != nil) {
-            self.imageView.image = self.selectedPerson.image!
+        if (self.selectedPerson?.image != nil) {
+            self.imageView.image = self.selectedPerson?.image!
             }
         }
     
@@ -65,7 +64,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         let image = info[UIImagePickerControllerEditedImage] as UIImage
         
         self.imageView.image = image
-        self.selectedPerson.image = imageView.image
+        self.selectedPerson?.image = imageView.image
         
         imagePickerController.dismissViewControllerAnimated(true, completion: nil)
     }

@@ -15,19 +15,16 @@ class Person : NSObject, NSCoding {
     
     var firstName : String
     var lastName : String
-//    var isStudent = true
     var image : UIImage?
     
     override init() {
         self.firstName = "Patrick"
         self.lastName = "Landin"
-//        self.isStudent = true
     }
     
     init (first: String, last: String) {
         self.firstName = first
         self.lastName = last
-//        self.isStudent = studentStatus
     }
     
     // return the first and last names in a string
