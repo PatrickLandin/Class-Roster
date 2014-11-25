@@ -147,8 +147,15 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="270" id="01o-Mx-o4C"/>
-                                    <constraint firstAttribute="width" constant="270" id="Pdg-3Q-BDI"/>
+                                    <constraint firstAttribute="width" constant="270" id="Pdg-3Q-BDI">
+                                        <variation key="heightClass=compact" constant="270"/>
+                                    </constraint>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="01o-Mx-o4C"/>
+                                    </mask>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" restorationIdentifier="Camera Button" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHV-pf-kse">
                                 <rect key="frame" x="242" y="474" width="116" height="30"/>
@@ -168,17 +175,52 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="eIN-xn-5Sd" firstAttribute="leading" secondItem="nXs-xL-F93" secondAttribute="leadingMargin" constant="13" id="0z9-nt-aBe"/>
                             <constraint firstItem="vHV-pf-kse" firstAttribute="top" secondItem="myc-0b-zIZ" secondAttribute="bottom" constant="8" id="4Vs-nq-HAO"/>
                             <constraint firstAttribute="centerX" secondItem="myc-0b-zIZ" secondAttribute="centerX" id="JcV-pZ-Dt1"/>
+                            <constraint firstItem="j33-yu-Vsh" firstAttribute="top" secondItem="myc-0b-zIZ" secondAttribute="bottom" constant="46" id="Jig-ju-ufx"/>
+                            <constraint firstItem="vHV-pf-kse" firstAttribute="leading" secondItem="nXs-xL-F93" secondAttribute="leadingMargin" constant="58" id="Lx8-aT-2Fg"/>
                             <constraint firstItem="hn7-El-fXQ" firstAttribute="top" secondItem="eIN-xn-5Sd" secondAttribute="bottom" constant="14" id="NIx-ur-z17"/>
+                            <constraint firstItem="eIN-xn-5Sd" firstAttribute="top" secondItem="jtr-nB-a6N" secondAttribute="bottom" constant="46" id="RFV-DA-uMm"/>
                             <constraint firstItem="myc-0b-zIZ" firstAttribute="top" secondItem="hn7-El-fXQ" secondAttribute="bottom" constant="18" id="SPZ-fl-22Y"/>
                             <constraint firstAttribute="centerX" secondItem="vHV-pf-kse" secondAttribute="centerX" id="Wj2-iB-BgQ"/>
                             <constraint firstAttribute="centerX" secondItem="eIN-xn-5Sd" secondAttribute="centerX" id="ZU4-SM-3VJ">
                                 <variation key="heightClass=compact" constant="200"/>
                             </constraint>
+                            <constraint firstItem="myc-0b-zIZ" firstAttribute="top" secondItem="jtr-nB-a6N" secondAttribute="bottom" constant="20" id="c33-lE-VNe"/>
                             <constraint firstItem="hn7-El-fXQ" firstAttribute="leading" secondItem="eIN-xn-5Sd" secondAttribute="leading" id="csa-XE-49r"/>
+                            <constraint firstItem="j33-yu-Vsh" firstAttribute="top" secondItem="vHV-pf-kse" secondAttribute="bottom" constant="93" id="ddO-pY-5eA"/>
                             <constraint firstItem="eIN-xn-5Sd" firstAttribute="top" secondItem="jtr-nB-a6N" secondAttribute="bottom" constant="40" id="glN-R5-S9L"/>
+                            <constraint firstItem="myc-0b-zIZ" firstAttribute="top" secondItem="hn7-El-fXQ" secondAttribute="bottom" constant="18" id="qGR-uF-5jH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="myc-0b-zIZ" secondAttribute="trailing" constant="149" id="qou-Xu-yoG"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0z9-nt-aBe"/>
+                                <exclude reference="RFV-DA-uMm"/>
+                                <exclude reference="SPZ-fl-22Y"/>
+                                <exclude reference="c33-lE-VNe"/>
+                                <exclude reference="qou-Xu-yoG"/>
+                                <exclude reference="Lx8-aT-2Fg"/>
+                                <exclude reference="Jig-ju-ufx"/>
+                                <exclude reference="ddO-pY-5eA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="0z9-nt-aBe"/>
+                                <exclude reference="RFV-DA-uMm"/>
+                                <exclude reference="ZU4-SM-3VJ"/>
+                                <exclude reference="JcV-pZ-Dt1"/>
+                                <include reference="c33-lE-VNe"/>
+                                <include reference="qou-Xu-yoG"/>
+                                <exclude reference="4Vs-nq-HAO"/>
+                                <include reference="Lx8-aT-2Fg"/>
+                                <exclude reference="Wj2-iB-BgQ"/>
+                                <include reference="Jig-ju-ufx"/>
+                                <include reference="ddO-pY-5eA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="firstNameText" destination="eIN-xn-5Sd" id="DTc-e9-AOp"/>
